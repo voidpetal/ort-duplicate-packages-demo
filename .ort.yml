@@ -1,0 +1,5 @@
+---
+analyzer:
+  enabled_package_managers:
+    - "NPM"
+    - "Yarn"

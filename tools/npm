@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ "$1" == "info" && "$3" == "picocolors@1.1.1" ]]; then
+    "$REAL_NPM" "$@" | jq 'del(.repository.type)'
+else
+    exec "$REAL_NPM" "$@"
+fi
